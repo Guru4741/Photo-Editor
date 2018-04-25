@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Photo Editor</title>	
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-primary mb-5">
+		<div class="container">
+			<a href="#" class="navbar-brand">Photo Editor</a>
+			<h5 class="text-muted"><small>Edit your Photos and give them a caption</small></h5>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 m-auto">
+				<div class="custom-file mb-3">
+					<input type="file" class="custom-file-input" id="upload-file">
+					<label for="upload-file" class="custom-file-label">Choose Image</label>
+				</div>
+				<canvas id="canvas"></canvas>
+				<h4 class="text-center my-3">Filters</h4>
+				<div class="row text-center my-4">
+					<div class="col-md-3">
+						<div class="btn-group btn-group-sm">
+							<button class="filter-btn brightness-remove btn btn-primary">-</button>
+							<button class="btn btn-primary btn-disabled disabled">Brightness</button>
+							<button class="filter-btn brightness-add btn btn-primary">+</button>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="btn-group btn-group-sm">
+							<button class="filter-btn contrast-remove btn btn-primary">-</button>
+							<button class="btn btn-primary btn-disabled disabled">Contrast</button>
+							<button class="filter-btn contrast-add btn btn-primary">+</button>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="btn-group btn-group-sm">
+							<button class="filter-btn saturation-remove btn btn-primary">-</button>
+							<button class="btn btn-primary btn-disabled disabled">Saturation</button>
+							<button class="filter-btn saturation-add btn btn-primary">+</button>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="btn-group btn-group-sm">
+							<button class="filter-btn vibrance-remove btn btn-primary">-</button>
+							<button class="btn btn-primary btn-disabled disabled">Vibrance</button>
+							<button class="filter-btn vibrance-add btn btn-primary">+</button>
+						</div>
+					</div>
+				</div><!-- End of Row -->
+
+				<h4 class="text-center my-3">Effects</h4>
+				<div class="row mb-3">
+					<div class="col-md-3">
+						<button class="filter-btn vintage-add btn-dark btn-block">Vintage</button>
+					</div>
+					<div class="col-md-3">
+						<button class="filter-btn lomo-add btn-dark btn-block">Lomo</button>
+					</div>
+					<div class="col-md-3">
+						<button class="filter-btn clarity-add btn-dark btn-block">Clarity</button>
+					</div>
+					<div class="col-md-3">
+						<button class="filter-btn sincity-add btn-dark btn-block">Sin City</button>
+					</div>
+				</div> <!-- End of Row <--></-->
+								
+				<div class="row mb-3">
+					<div class="col-md-3">
+						<button class="filter-btn crossprocess-add btn-dark btn-block">Cross Process</button>
+					</div>
+					<div class="col-md-3">
+						<button class="filter-btn pinhole-add btn-dark btn-block">Pinhole</button>
+					</div>
+					<div class="col-md-3">
+						<button class="filter-btn nostalgia-add btn-dark btn-block">Nostalgia</button>
+					</div>
+					<div class="col-md-3">
+						<button class="filter-btn hermajesty-add btn-dark btn-block">Her Majesty</button>
+					</div>
+				</div> <!-- End of Row <--></-->
+				
+				<div class="row my-5">
+					<div class="col-md-6">
+						<input type="text" placeholder="Want to add an caption. Type Here ..." id="caption" class="form-control">
+					</div>
+					<div class="col-md-3">						
+						<input type="color" name="favcolor" value="#fff" id="fontColor" class="form-control mt-1 fontColor" data-toggle="tooltip" data-placement="bottom" title="Change Font Color" data-original-title="Tooltip on bottom" aria-describedby="tooltip501109">
+					</div>					
+					<div class="col-md-3">
+						<button class="btn btn-primary btn-block" id="caption-btn">Add Caption</button>
+					</div>					
+				</div>
+
+				<div class="row my-5">
+					<div class="col-md-6">
+						<button class="btn btn-primary btn-block" id="download-btn">Download Image</button>
+					</div>
+					<div class="col-md-6">
+						<button class="btn btn-danger btn-block" id="revert-btn">Remove Filters</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
